@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$password_hash = "671bbae403264bd933ec719ce94c607a";
+$password_hash = "6026ebd1e9353f0ee89f9f5cb972c08f";
 
 if (isset($_POST['password'])) {
     if (md5($_POST['password']) == $password_hash) {
