@@ -1,0 +1,26 @@
+<?php
+define('WP_CACHE', true); // WP-Optimize Cache
+define('DB_NAME', 'rajagrafindo');
+define('DB_USER', 'uSIsbKXBcjl9');
+define('DB_PASSWORD', 'rVLVslQFuDrDGI9C');
+define('DB_HOST', 'localhost');
+define('DB_CHARSET', 'utf8');
+define('DB_COLLATE', '');
+define('AUTH_KEY',         '7l9GrfRaBV58dxBiN0MynlRfRanVG99abUoUAXHY');
+define('SECURE_AUTH_KEY',  'Ge7cZF2j1jAe94fhv0EoGL0nHEqzyjEOe8ElB2vp');
+define('LOGGED_IN_KEY',    'PNi8gG99DRLIV0UtmyLEg5GdjERPyEiBjTJz5HWh');
+define('NONCE_KEY',        'tpktNs6lXmCyDESEsvF8sLyAapkJYoVlQGRLuYw5');
+define('AUTH_SALT',        '89hiAhZMb7fWuWJ6ehec3kB1wlN60V0y4hBEH04U');
+define('SECURE_AUTH_SALT', '0TWMByub1xdTIW0IaiIOvelHKCwrx3JYDNcQcKNr');
+define('LOGGED_IN_SALT',   'UW4oE6GMdswiIMIdjLZj7467sxQKjmsFY93xvMft');
+define('NONCE_SALT',       '42ChJNAotV3kGN28R3Iah7KEV2py5HOAakxvXXpC');
+$table_prefix  = 'wp_ebea06c47a_';
+define('SP_REQUEST_URL', ($_SERVER['HTTPS'] ? 'https://' : 'http://') . $_SERVER['HTTP_HOST']);
+define('WP_SITEURL', SP_REQUEST_URL);
+define('WP_HOME', SP_REQUEST_URL);
+/* Change WP_MEMORY_LIMIT to increase the memory limit for public pages. */
+define('WP_MEMORY_LIMIT', '1024M');
+/* That's all, stop editing! Happy blogging. */
+if ( !defined('ABSPATH') )
+        define('ABSPATH', dirname(__FILE__) . '/');
+require_once(ABSPATH . 'wp-settings.php');
