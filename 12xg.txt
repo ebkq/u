@@ -1,0 +1,4 @@
+	public $host = 'localhost';
+	public $user = 'pangampr_portal';
+	public $password = 'Portaln6amprah';
+	public $db = 'pangampr_portal';
