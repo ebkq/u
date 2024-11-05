@@ -1,24 +1,29 @@
 <?php
-if ( file_exists(ABSPATH . "wp-content/advanced-headers.php") ) { 
-	require_once ABSPATH . "wp-content/advanced-headers.php";
+//Begin Really Simple SSL key
+define('RSSSL_KEY', 'uFkNZgaRtWunsbzUWYYrJGQVm5VMoeFNdJEP5wsuDo3Q3I5fTuzowQznnrMvp3YQ');
+//END Really Simple SSL key
+if ( file_exists('/home/akademim/fabil.id/wp-content/advanced-headers.php') ) { 
+	require_once '/home/akademim/fabil.id/wp-content/advanced-headers.php';
 }
+
 
 //Begin Really Simple SSL session cookie settings
 @ini_set('session.cookie_httponly', true);
 @ini_set('session.cookie_secure', true);
 @ini_set('session.use_only_cookies', true);
 //END Really Simple SSL
-
+define('WP_AUTO_UPDATE_CORE', 'minor');
+define( 'WP_CACHE', true ); // Added by Hummingbird
 /**
  * The base configuration for WordPress
  *
- * The wp-config.php creation script uses this file during the installation.
- * You don't have to use the web site, you can copy this file to "wp-config.php"
- * and fill in the values.
+ * The wp-config.php creation script uses this file during the
+ * installation. You don't have to use the web site, you can
+ * copy this file to "wp-config.php" and fill in the values.
  *
  * This file contains the following configurations:
  *
- * * Database settings
+ * * MySQL settings
  * * Secret keys
  * * Database table prefix
  * * ABSPATH
@@ -27,56 +32,45 @@ if ( file_exists(ABSPATH . "wp-content/advanced-headers.php") ) {
  *
  * @package WordPress
  */
-
-// ** Database settings - You can get this info from your web host ** //
+define( 'WP_MEMORY_LIMIT', '128M' );
+// ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'akademim_wp897' );
-
-/** Database username */
-define( 'DB_USER', 'akademim_wp897' );
-
-/** Database password */
-define( 'DB_PASSWORD', '53+1y0N02022' );
-
-/** Database hostname */
+define( 'DB_NAME', 'akademim_fabilid' );
+/** MySQL database username */
+define( 'DB_USER', 'akademim_fabilid' );
+/** MySQL database password */
+define( 'DB_PASSWORD', '(6S0p.JDp4' );
+/** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
-
-/** Database charset to use in creating database tables. */
+/** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
-
-/** The database collate type. Don't change this if in doubt. */
+/** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
-
 /**#@+
- * Authentication unique keys and salts.
+ * Authentication Unique Keys and Salts.
  *
- * Change these to different unique phrases! You can generate these using
- * the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}.
- *
- * You can change these at any point in time to invalidate all existing cookies.
- * This will force all users to have to log in again.
+ * Change these to different unique phrases!
+ * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
+ * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'A1$+o/E|nb EeL>X9%jMwL]oVj#c^VNYuF]tMMIR$vwR7m)k4Py;`RQiAFl,+(e~' );
-define( 'SECURE_AUTH_KEY',  'aF/RP+$t%*{NSJ*(.xF(*eV-1yy;[3.W)`KY>Y%5c:LtqZXPJ)~VDhPrBl WI6(H' );
-define( 'LOGGED_IN_KEY',    '|QsPPJU~f4Q<siLu@t,BUJ/}_h@:kWAPA4HP!AOqr0ZG--F?Hh90P,#LG~r 2)7L' );
-define( 'NONCE_KEY',        'SvFBiV|`cX.}dQdba-__w_.@#Oa_$.O8bkx=v$D(%V|I%U<=sahXqaL(k|fATyKx' );
-define( 'AUTH_SALT',        'G>![hQIPi!CaeqABZ`{nTN%iC:D5BIvX(xj4$Hq[v`?A KM09/9!HTBJL,*F{<,I' );
-define( 'SECURE_AUTH_SALT', '$b5r xWTOa5&b}BGg?<CI,eR,t>?>)2GdQDtno2dSFwQ.8=@YyeQlgSomrx,PoM4' );
-define( 'LOGGED_IN_SALT',   'S~S{c!UV{nv[Lm|px@L.tNh*UN0)R3}h/@yPR4dh(!v#8-tRjoyMiKh(Np|2*lvT' );
-define( 'NONCE_SALT',       '*V,JllC0:v_~+xCp!m|pG(rLw!Gn~ | qCe1y}-W^=RUxxTzHGW!$O^^%oj+!#^>' );
-
+define( 'AUTH_KEY',         'lcosltyl2kkpqsss0n1ijldbpkfvdmwc4juscfxv4npfcibqt0bwoxkgohtamqsj' );
+define( 'SECURE_AUTH_KEY',  'vrqvpvz3w2xx9vakfvp8pqtlmp69hlrpndnq3dz6cnhpajr51fmdz6jjojb025um' );
+define( 'LOGGED_IN_KEY',    'q1ecpl7d3h9zkgpcuyzrhzmx1eigeu3sjrmbjzi4p7nfrtgxwjmkl0uskorxlxty' );
+define( 'NONCE_KEY',        'iihxgxfn5rgihll6q4wsqskymzcugqd8pziuievk47jpzg2dqlirnwrsufyvnnmf' );
+define( 'AUTH_SALT',        '0xctixi2qm99w7qoqosn3cfwk83rp6gvu1kadsiymptyhppknryjhudz4ov2fze2' );
+define( 'SECURE_AUTH_SALT', 'vrtixqitzhr97tq9xhoveklthxycnswyqygw583t0bo4cygo9n0sv65wr3flgahk' );
+define( 'LOGGED_IN_SALT',   '7m3a73lje2vqconzyhdtl7depjlyliujkmr7dq2pmddhznufnh8dnmdh1iy0re6q' );
+define( 'NONCE_SALT',       'lxnspjqtl2ahovk17h94rtjhbwjuodlo4bt3f7vzzacuijaxltg1ski6sr5p55qt' );
 /**#@-*/
-
 /**
- * WordPress database table prefix.
+ * WordPress Database Table prefix.
  *
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix = 'wpwq_';
-
+$table_prefix = 'wpgp_';
 /**
  * For developers: WordPress debugging mode.
  *
@@ -90,18 +84,10 @@ $table_prefix = 'wpwq_';
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
 define( 'WP_DEBUG', false );
-
-/* Add any custom values between this line and the "stop editing" line. */
-
-
-
-define( 'WP_CACHE', true ); // Added by Hummingbird
 /* That's all, stop editing! Happy publishing. */
-
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', __DIR__ . '/' );
 }
-
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
