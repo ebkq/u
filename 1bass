@@ -1,0 +1,121 @@
+<?php
+/**
+ * The base configuration for WordPress
+ *
+ * The wp-config.php creation script uses this file during the installation.
+ * You don't have to use the web site, you can copy this file to "wp-config.php"
+ * and fill in the values.
+ *
+ * This file contains the following configurations:
+ *
+ * * Database settings
+ * * Secret keys
+ * * Database table prefix
+ * * ABSPATH
+ *
+ * @link https://wordpress.org/documentation/article/editing-wp-config-php/
+ *
+ * @package WordPress
+ */
+
+// ** Database settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define( 'DB_NAME', 'ewarga_wp_global' );
+
+/** Database username */
+define( 'DB_USER', 'ewargav2_db_user' );
+
+/** Database password */
+define( 'DB_PASSWORD', 'KxepB37N9;bW' );
+
+/** Database hostname */
+define( 'DB_HOST', '10.21.3.46' );
+
+/** Database charset to use in creating database tables. */
+define( 'DB_CHARSET', 'utf8' );
+
+/** The database collate type. Don't change this if in doubt. */
+define( 'DB_COLLATE', '' );
+
+/**#@+
+ * Authentication unique keys and salts.
+ *
+ * Change these to different unique phrases! You can generate these using
+ * the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}.
+ *
+ * You can change these at any point in time to invalidate all existing cookies.
+ * This will force all users to have to log in again.
+ *
+ * @since 2.6.0
+ */
+// define( 'AUTH_KEY',         'put your unique phrase here' );
+// define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
+// define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
+// define( 'NONCE_KEY',        'put your unique phrase here' );
+// define( 'AUTH_SALT',        'put your unique phrase here' );
+// define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
+// define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
+// define( 'NONCE_SALT',       'put your unique phrase here' );
+define('AUTH_KEY',         'CN[s-7O*PpsbwFDZpmHiSms85DNjm2x3-hja|9PR:]e|Tos!Wm<=Y4rmNb)4U1s9');
+define('SECURE_AUTH_KEY',  'Oy^Ovu)y|?u#/c->ps=CY7syf:900G/N#Mx:qA$8zc2E|eV_?0)G9!9?{U(Nm|Lx');
+define('LOGGED_IN_KEY',    ',>D/a?0EHr&|ySEFS7Cjky++RzfD9~x@~,?QT276tNyg>XPJ5W(Dl_Hk<9Dq.OhL');
+define('NONCE_KEY',        '%HM</^?NO<5,OI?s Cd3<|+;`&/L{[AA`zI&WZQHi/8VcT<b|(uF9.1-hwjT]|gu');
+define('AUTH_SALT',        '#fHM;vk21V1paId]EfImq1}>#vaB1pDD;F%-r^Ia&&Jnwx0=.|5/*]T#P3(CR.=v');
+define('SECURE_AUTH_SALT', 'ux9)||Hq3g$gDntnTE}4#$Qe^extd+ZeY*|V315A6-YIPYFM DZ.0-JAh2lK}i>#');
+define('LOGGED_IN_SALT',   '*1d>,nxlU|rYmd#B1=#{+vyf:8G1[sbL~OhhcTD2ll^.B~Q9=,|.>@k E#|B@<r ');
+define('NONCE_SALT',       'x~]htx)Gh6M<hlLPnIAF)38kO6%;Dg0*)+_K5qe%hzW*>{Q<yw~tfX-d$tM91mn|');
+
+
+/**#@-*/
+
+/**
+ * WordPress database table prefix.
+ *
+ * You can have multiple installations in one database if you give each
+ * a unique prefix. Only numbers, letters, and underscores please!
+ */
+$table_prefix = 'wp_';
+
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Change this to true to enable the display of notices during development.
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+ * in their development environments.
+ *
+ * For information on other constants that can be used for debugging,
+ * visit the documentation.
+ *
+ * @link https://wordpress.org/documentation/article/debugging-in-wordpress/
+ */
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false) {
+	$_SERVER['HTTPS'] = 'on';
+}
+
+define( 'WP_DEBUG', false );
+define( 'WP_ALLOW_MULTISITE', true );
+define( 'MULTISITE', true );
+define( 'SUBDOMAIN_INSTALL', false );
+define( 'DOMAIN_CURRENT_SITE', 'ewarga.id' );
+define( 'PATH_CURRENT_SITE', '/' );
+define( 'SITE_ID_CURRENT_SITE', 1 );
+define( 'BLOG_ID_CURRENT_SITE', 1 );
+
+/* Add any custom values between this line and the "stop editing" line. */
+
+define( 'S3_UPLOADS_BUCKET', 'portal-ewarga/aset' );
+define( 'S3_UPLOADS_REGION', 'ap-singapore-1' );
+define( 'S3_UPLOADS_KEY', '00607ce9670b1e1a0ef2c396c7fd0438c9428151' );
+define( 'S3_UPLOADS_SECRET', 'UCm8AFhGpnmaHaj+i/v+MMr5DwXxU5uuDprEnJ1mbFI=' );
+define( 'S3_UPLOADS_BUCKET_URL', 'https://objectstorage.ap-singapore-1.oraclecloud.com/n/ax4dabczjygi/b/portal-ewarga/o/aset' );
+define( 'S3_UPLOADS_USE_INSTANCE_PROFILE', true );
+
+/* That's all, stop editing! Happy publishing. */
+
+/** Absolute path to the WordPress directory. */
+if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', __DIR__ . '/' );
+}
+
+/** Sets up WordPress vars and included files. */
+require_once ABSPATH . 'wp-settings.php';
