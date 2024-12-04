@@ -1,0 +1,7 @@
+[database]
+
+driver = mysql
+host = localhost
+username = jurnalft_tambang
+password = "Jurnal$%^&2022"
+name = jurnalft_coba2a
