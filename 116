@@ -1,0 +1,104 @@
+<?php
+//Begin Really Simple SSL key
+define('RSSSL_KEY', 'yVq2EKggVrK6ZyTZdp4Z1zqs1fNtz3AFFteDQBuUMWbHiXN5cCctSwv4tjFR2waw');
+//END Really Simple SSL key
+//Begin Really Simple SSL session cookie settings
+@ini_set('session.cookie_httponly', true);
+@ini_set('session.cookie_secure', true);
+@ini_set('session.use_only_cookies', true);
+//END Really Simple SSL
+//END Really Simple SSL
+define('WP_CACHE', true);
+define( 'NOBLOGREDIRECT', 'https://www.klikers.id' );
+define( 'WPCACHEHOME', '/var/www/kliksaja/data/www/klikers.id/wp-content/plugins/wp-super-cacheaaaa/' );
+define('CONCATENATE_SCRIPTS', false);
+define('WP_AUTO_UPDATE_CORE', 'minor');// This setting is required to make sure that WordPress updates can be properly managed in WordPress Toolkit. Remove this line if this WordPress website is not managed by WordPress Toolkit anymore.
+/** Enable W3 Total Cache Edge Mode */
+define('JWT_AUTH_SECRET_KEY', 'ksjskjdsieo987ksdsusieue*76ajaksjakjhbfjhwsfk-hjuwubdsdg#4$');
+define('JWT_AUTH_CORS_ENABLE', true); 
+define('W3TC_EDGE_MODE', true); // Added by W3 Total Cache
+define('WP_MEMORY_LIMIT', '256M');
+/**
+ * The base configuration for WordPress
+ *
+ * The wp-config.php creation script uses this file during the
+ * installation. You don't have to use the web site, you can
+ * copy this file to "wp-config.php" and fill in the values.
+ *
+ * This file contains the following configurations:
+ *
+ * * MySQL settings
+ * * Secret keys
+ * * Database table prefix
+ * * ABSPATH
+ *
+ * @link https://codex.wordpress.org/Editing_wp-config.php
+ *
+ * @package WordPress
+ */
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define('DB_NAME', 'sql_kliKrsDB07');
+/** MySQL database username */
+define('DB_USER', 'sql_klikrsd_usr');
+/** MySQL database password */
+define('DB_PASSWORD', 'o1Bjdtp6tapM7Cdx');
+/** MySQL hostname */
+define('DB_HOST', 'localhost:3306');
+/** Database Charset to use in creating database tables. */
+define('DB_CHARSET', 'utf8mb4');
+/** The Database Collate type. Don't change this if in doubt. */
+define('DB_COLLATE', '');
+/**#@+
+ * Authentication Unique Keys and Salts.
+ *
+ * Change these to different unique phrases!
+ * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
+ * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+ *
+ * @since 2.6.0
+ */
+define('AUTH_KEY',         'A*.zneVpI0].+z?;(5,8:%.KV3b|Uf3MA40::b@?`{sd?q4zrh?H2T Sf:%i-e/a');
+define('SECURE_AUTH_KEY',  '&SkLA}l%H?SI8o) nYUqhJ2pVF:kpxnZYYjNB209v@o4&/r5h72<=(O:e*GQBY[4');
+define('LOGGED_IN_KEY',    '88orqX7Lt`)<LwZAbGb[%C8cY`N2#>v@);s|qoelwK6RY;lM=-+7+[n*13fO0K08');
+define('NONCE_KEY',        'e^mk45S@^S(qxV27k,6|dKinlVRBpjsGF@n7^t(da=d$b-c% ={5 >}`GOdhi8.$');
+define('AUTH_SALT',        'XZ)uY)Qv^-2hq/TM^^A85Rr=mTG~~A8kal[xG-W~<Bk)|]#}G[l*k&~JKwZaE=FX');
+define('SECURE_AUTH_SALT', '[1HB+De^#v~`+=!SBcOjI-6}`_j6k:0Wwr=/X2Un8t(=J# hY9U$ytX-d1J%De`O');
+define('LOGGED_IN_SALT',   'gL&eg7$rjsw9wnd+m#{l/:) /-`vsXzDEXOOQ%tR3klv:+D81up`$-7y&mcaI;5H');
+define('NONCE_SALT',       '9{w`^Q|u$NLU[#(fc0``&?[3r)lT~;sV$eclLJ{GKSqcV)K)Jf;3+={@.DO[RM+E');
+define('WP_CACHE_KEY_SALT', 'klikers.id');
+/**#@-*/
+/**
+ * WordPress Database Table prefix.
+ *
+ * You can have multiple installations in one database if you give each
+ * a unique prefix. Only numbers, letters, and underscores please!
+ */
+$table_prefix  = 'kliksj_';
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Change this to true to enable the display of notices during development.
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+ * in their development environments.
+ *
+ * For information on other constants that can be used for debugging,
+ * visit the Codex.
+ *
+ * @link https://codex.wordpress.org/Debugging_in_WordPress
+ */
+define('WP_ALLOW_MULTISITE', true);
+define( 'MULTISITE', true );
+define( 'SUBDOMAIN_INSTALL', true );
+define( 'DOMAIN_CURRENT_SITE', 'www.klikers.id' );
+define( 'PATH_CURRENT_SITE', '/' );
+define( 'SITE_ID_CURRENT_SITE', 1 );
+define( 'BLOG_ID_CURRENT_SITE', 1 );
+define('WP_DEBUG', false);
+define( 'DISALLOW_FILE_EDIT', true );
+/* That's all, stop editing! Happy blogging. */
+/** Absolute path to the WordPress directory. */
+if ( !defined('ABSPATH') )
+	define('ABSPATH', dirname(__FILE__) . '/');
+/** Sets up WordPress vars and included files. */
+require_once(ABSPATH . 'wp-settings.php');
