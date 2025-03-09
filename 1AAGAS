@@ -1,0 +1,117 @@
+<?php
+/**
+ * The base configuration for WordPress
+ *
+ * The wp-config.php creation script uses this file during the installation.
+ * You don't have to use the web site, you can copy this file to "wp-config.php"
+ * and fill in the values.
+ *
+ * This file contains the following configurations:
+ *
+ * * Database settings
+ * * Secret keys
+ * * Database table prefix
+ * * Localized language
+ * * ABSPATH
+ *
+ * @link https://wordpress.org/support/article/editing-wp-config-php/
+ *
+ * @package WordPress
+ */
+
+// ** Database settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define( 'DB_NAME', 'puskesmasbojongsari' );
+
+/** Database username */
+define( 'DB_USER', 'bojongsari' );
+
+/** Database password */
+define( 'DB_PASSWORD', 'bojongsari2022@@#' );
+
+/** Database hostname */
+define( 'DB_HOST', 'global-db:3306' );
+
+/** Database charset to use in creating database tables. */
+define( 'DB_CHARSET', 'utf8mb4' );
+
+/** The database collate type. Don't change this if in doubt. */
+define( 'DB_COLLATE', '' );
+
+/**#@+
+ * Authentication unique keys and salts.
+ *
+ * Change these to different unique phrases! You can generate these using
+ * the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}.
+ *
+ * You can change these at any point in time to invalidate all existing cookies.
+ * This will force all users to have to log in again.
+ *
+ * @since 2.6.0
+ */
+define( 'AUTH_KEY',          '`(Tul(^Uo,21VH7&CO<PY{EM,{{1Hje</M0aia-!T0R2LZ#K18.sZg6zwXF8Ia#:' );
+define( 'SECURE_AUTH_KEY',   'NR_,)m)G-*cVcg3oyq:@Da.7s-5$hnT0%))6aitsp,@Lj F>dYFRr&*vf`jm!s7R' );
+define( 'LOGGED_IN_KEY',     'uUH9;w@<B%^uE<DMT7SxsB{nQ/h]TIA6!7fCj/4$F8` ~t7Vj}pZOI^4=Zxo+,M8' );
+define( 'NONCE_KEY',         '1-9$)q)ue9]jf!KiVP7OiU2Gk_IFfblE1ZCc2UA/~udae/w5PY_j}(%V}g]bGV}b' );
+define( 'AUTH_SALT',         '[5zI!EC7$21p^tO~2[;$%2&L6JkE3f,& fkg47w?OO|*fw!h$JtY+pZs_j!>AAiI' );
+define( 'SECURE_AUTH_SALT',  'TzV`0XZjKX[#vWiT>u#^&2S9JThw_:. )}wx)GEsp=btzP7dRfn2T+g#QH~Xr(w!' );
+define( 'LOGGED_IN_SALT',    'ZI*#h3Y/zm0UjF}dXsxp{h&35 Vb{:cV1$11=z?(1j(^ReS,QE:<({RXhFS9BzHN' );
+define( 'NONCE_SALT',        'CDQA7XAs`1@@yX0n,&on-vu(^}{<*Q8A,%*c~XPH>2F+s7BCLP>::XN)(Vh3K{tF' );
+define( 'WP_CACHE_KEY_SALT', 'puskesmasbojongsari.purbalinggakab.go.id_obj:' );
+
+
+/**#@-*/
+
+/**
+ * WordPress database table prefix.
+ *
+ * You can have multiple installations in one database if you give each
+ * a unique prefix. Only numbers, letters, and underscores please!
+ */
+$table_prefix = 'wp_';
+
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Change this to true to enable the display of notices during development.
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+ * in their development environments.
+ *
+ * For information on other constants that can be used for debugging,
+ * visit the documentation.
+ *
+ * @link https://wordpress.org/support/article/debugging-in-wordpress/
+ */
+define( 'WP_DEBUG', false );
+
+
+/* Add any custom values between this line and the "stop editing" line. */
+
+if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
+	$_SERVER['HTTPS'] = 'on';
+}
+
+// Enable Debug logging to the /wp-content/debug.log file
+define( 'WP_DEBUG_LOG', false );
+
+// Disable display of errors and warnings.
+define( 'WP_DEBUG_DISPLAY', false );
+@ini_set( 'display_errors', 0 );
+
+// Use dev versions of core JS and CSS files (only needed if you are modifying these core files)
+define( 'SCRIPT_DEBUG', false );
+
+$redis_server = array('host'=> 'global-redis','port'=> 6379,);
+define( 'RT_WP_NGINX_HELPER_REDIS_HOSTNAME', 'global-redis' );
+define( 'RT_WP_NGINX_HELPER_REDIS_PORT', '6379' );
+define( 'RT_WP_NGINX_HELPER_REDIS_PREFIX', 'puskesmasbojongsari.purbalinggakab.go.id_page:' );
+define( 'WP_REDIS_MAXTTL', '14400' );
+/* That's all, stop editing! Happy publishing. */
+
+/** Absolute path to the WordPress directory. */
+if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', __DIR__ . '/' );
+}
+
+/** Sets up WordPress vars and included files. */
+require_once ABSPATH . 'wp-settings.php';
